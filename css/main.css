@@ -45,7 +45,26 @@ a {
   /* 拿掉底線 */
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1000px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.bd-1 {
+  border: 2px solid #000;
+}
+
 /* 圖片取代文字技巧 */
+
 .logo a {
   display: block;
   width: 250px;
@@ -57,14 +76,83 @@ a {
   overflow: hidden;
 }
 
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  width: 83px;
+  padding: 8px;
+  background: #39f;
+  text-align: center;
+}
+
+.menu a:hover {
+  background: rgb(221, 156, 36);
+}
+
 @media (max-width: 768px) {
-	.logo{
-		margin-bottom:20px;
-		width:150px;
+  .logo {
+    margin-bottom: 20px;
+    width: 150px;
+  }
+  .logo a {
+    width: 150px;
+    height: 150px;
+    background: url(../img/M2.png) no-repeat
+  }
+}
+
+.main {
+  display: flex;
+}
+
+.content {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+
+.side {
+  margin-left: 30px;
+}
+
+.side img {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 768px) {
+  .main {
+    display: block;
+  }
+	.content,.sidebar{
+		width: 100%;
 	}
-	.logo a{
-		width:150px;
-		height:150px;
-		background:url(../images/M2.png) no-repeat
-	}	
+	.content{
+		margin-bottom: 20px;
+	}
+	.side{
+		display: flex;	
+		flex-direction: column;
+		align-items: center;
+    margin-left: 0;
+	}
+	.side img{
+		margin-bottom: 10px;
+	}
+}
+
+.footer p {
+  text-align: center;
+  padding: 3px;
 }
